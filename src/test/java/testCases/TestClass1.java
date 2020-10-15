@@ -9,20 +9,11 @@ import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
-public class TestClass1 {
-	WebDriver driver;
-	String base_url="https://www.amazon.in/";
-	int implicit_wait=20;
-	
+import baseClass.BaseClass1;
 
-	@BeforeMethod
-    public void set_up() {
-	System.setProperty("webdriver.chrome.driver","D:\\Automation\\chromedriver.exe\\" );
-	driver=new ChromeDriver();
-	driver.manage().window().maximize();
-	driver.manage().timeouts().implicitlyWait(implicit_wait, TimeUnit.SECONDS);
-	
-    }
+public class TestClass1 extends BaseClass1{
+
+
 	
 
 	@Test
@@ -36,8 +27,5 @@ public class TestClass1 {
 	
     }
 	
-	@AfterMethod
-	public void clean_up() {
-	driver.quit();
-	}
+	
 }

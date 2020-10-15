@@ -13,15 +13,7 @@ import baseClass.BaseClass1;
 
 public class TestClass2 extends BaseClass1{
 
-	@BeforeMethod
-	public void setup() {
-		
-		System.setProperty("webdriver.chrome.driver","D:\\Automation\\chromedriver.exe\\" );
-		driver=new ChromeDriver();
-		driver.manage().window().maximize();
-		driver.manage().timeouts().implicitlyWait(implicit_wait, TimeUnit.SECONDS);
-		
-	}
+
 	
 	@Test
 	public void TC_2_search_product() {
@@ -40,7 +32,5 @@ public class TestClass2 extends BaseClass1{
 		
 	}
 	
-	public void clean_up1() {
-		driver.quit();
-	}
+	
 }
